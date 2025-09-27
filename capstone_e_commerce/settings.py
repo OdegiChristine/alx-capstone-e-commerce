@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'products',
     'orders',
     'django_filters',
+    'rest_framework_simplejwt.token_blacklist',
 ]
 
 MIDDLEWARE = [

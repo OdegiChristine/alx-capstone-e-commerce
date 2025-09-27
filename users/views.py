@@ -29,13 +29,12 @@ class RegisterView(generics.CreateAPIView):
 
 
 class UserDeleteView(generics.DestroyAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
     permission_classes = [permissions.IsAuthenticated]
 
-    def get_object(self):
-        # Ensure only a user can delete their account
-        return self.request.user
+    def delete(self, request, *args, **kwargs):
+        user = request.user
+        user.delete()
+        return Response({"message": "Account deleted successfully"}, status=status.HTTP_204_NO_CONTENT)
 
 
 class UserProfileRetrieveUpdateView(generics.RetrieveUpdateAPIView):
