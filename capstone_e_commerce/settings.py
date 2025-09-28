@@ -168,15 +168,3 @@ SIMPLE_JWT = {
 CORS_ALLOW_ALL_ORIGINS = True
 
 AUTH_USER_MODEL = 'users.User'
-
-if os.environ.get("CREATE_SUPERUSER", "False") =="True":
-    try:
-        User = get_user_model()
-        if not User.objects.filter(is_superuser=True).exists():
-            User.objects.create_superuser(
-                email=os.environ.get("DJANGO_SUPERUSER_EMAIL"),
-                password=os.environ.get("DJANGO_SUPERUSER_PASSWORD"),
-            )
-            print("Superuser created successfully")
-    except Exception as e:
-        print(f"Failed to create superuser: {e}")
