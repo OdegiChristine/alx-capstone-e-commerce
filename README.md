@@ -73,3 +73,9 @@ Once the server is running, Swagger/OpenAPI docs are available at: `http://127.0
 ```bash
 pytest
 ```
+
+## ✨ Future Improvements
+- Add payments integration(Stripe/Paypal, Mpesa)
+- Product reviews & ratings
+- Seller dashboards
+- Email notifications
