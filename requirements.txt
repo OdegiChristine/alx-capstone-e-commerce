@@ -2,13 +2,15 @@ asgiref==3.9.1
 black==25.1.0
 click==8.2.1
 colorama==0.4.6
+dj-database-url==3.0.1
 Django==5.2.6
 django-cors-headers==4.8.0
-django-filter==25.1.0
+django-filter==25.1
 djangorestframework==3.16.1
 djangorestframework_simplejwt==5.5.1
 drf-yasg==1.21.10
 flake8==7.3.0
+gunicorn==23.0.0
 inflection==0.5.1
 iniconfig==2.1.0
 mccabe==0.7.0
@@ -30,3 +32,4 @@ PyYAML==6.0.2
 sqlparse==0.5.3
 tzdata==2025.2
 uritemplate==4.2.0
+whitenoise==6.11.0
