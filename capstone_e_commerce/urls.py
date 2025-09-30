@@ -10,20 +10,11 @@ schema_view = get_schema_view(
         title="E-commerce API",
         default_version="v1",
         description="API Documentation for the E-commerce Capstone Project",
-        contact=openapi.Contact(email="<EMAIL>"),
     ),
     public=True,
     permission_classes=[permissions.AllowAny],
     authentication_classes=[],
 )
-
-schema_view.security_definitions = {
-    "Bearer": {
-        "type": "apiKey",
-        "name": "Authorization",
-        "in": "header",
-    }
-}
 
 urlpatterns = [
     path('admin/', admin.site.urls),
